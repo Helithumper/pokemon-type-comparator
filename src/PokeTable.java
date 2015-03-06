@@ -132,7 +132,15 @@ public class PokeTable {
 		typeTable[14][17]="0x";
 		typeTable[15][17]="3x";
 		typeTable[16][17]="2x";
-		setOnes();
+		//setOnes();
+		for(int row = 0; row<typeTable.length; row++){
+			for(int col = 0; col<typeTable[0].length; col++){
+				if(typeTable[row][col]==null){typeTable[row][col]="<html><font color = black>1x</font></html>";}
+				if(typeTable[row][col]=="3x"){typeTable[row][col]="<html><font color = red>1/2x</font></html>";}
+				if(typeTable[row][col]=="2x"){typeTable[row][col]="<html><font color = green>2x</font></html>";}
+				if(typeTable[row][col]=="0x"){typeTable[row][col]="<html><font color = purple>0x</font></html>";}
+			}
+		}
 		
 	}
 	
@@ -149,8 +157,9 @@ public class PokeTable {
 	public String getMatchup(int row, int column){return typeTable[row][column];}
 	
 	public int getLength(){return typeTable[0].length;}
+	
 	//Methods
-	private void setOnes(){
+	/*private void setOnes(){
 		for(int row = 0; row<typeTable.length; row++){
 			for(int col = 0; col<typeTable[0].length; col++){
 				if(typeTable[row][col]==null){typeTable[row][col]="<html><font color = black>1x</font></html>";}
@@ -159,7 +168,7 @@ public class PokeTable {
 				if(typeTable[row][col]=="0x"){typeTable[row][col]="<html><font color = purple>0x</font></html>";}
 			}
 		}
-	}
+	}*/
 	
 	//toString()
 	@Override

@@ -21,8 +21,6 @@ public class ProgramMainFrame extends JPanel {
 	// fields
 	private String attDefChoice = "ATTACKING", typeChoice;
 	private int choiceNum = 0;
-	// private JLabel
-	// title,normal,fire,water,grass,electric,ice,fighting,poison,ground,flying,psychic,bug,rock,ghost,dragon,dark,steel,fairy;
 	private JPanel choicePanel, resultPanel;
 	private JComboBox choiceBox;
 	private JRadioButton attChoice, defChoice;
@@ -30,15 +28,10 @@ public class ProgramMainFrame extends JPanel {
 			"Electric", "Ice", "Fighting", "Poison", "Ground", "Flying",
 			"Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel",
 			"Fairy" };
-	// private JLabel
-	// normalEff,fireEff,waterEff,grassEff,electricEff,iceEff,fightingEff,poisonEff,groundEff,flyingEff,psychicEff,bugEff,rockEff,ghostEff,dragonEff,darkEff,steelEff,fairyEff;
 	private JLabel title;
 	private PokeTable table = new PokeTable("MainTable");
 	private JLabel[] typeText = new JLabel[18];
 	private JLabel[] typePicture = new JLabel[18];
-
-	// private String[] types =
-	// {"normal","fire","water","grass","electric","ice","fighting","poison","ground","flying","psychic","bug","rock","ghost","dragon","dark","steel","fairy"};
 
 	// Constructor
 	public ProgramMainFrame() {
@@ -105,107 +98,16 @@ public class ProgramMainFrame extends JPanel {
 			typePicture[i] = new JLabel(new ImageIcon("src/Icons/"
 					+ pokemonTypes[i].toLowerCase() + ".png"));
 		}
-
-		/*
-		 * normal = new JLabel(new ImageIcon("src/Icons/normal.png")); fire =
-		 * new JLabel(new ImageIcon("src/Icons/fire.png")); water = new
-		 * JLabel(new ImageIcon("src/Icons/water.png")); grass = new JLabel(new
-		 * ImageIcon("src/Icons/grass.png")); electric = new JLabel(new
-		 * ImageIcon("src/Icons/electric.png")); ice = new JLabel(new
-		 * ImageIcon("src/Icons/ice.png")); fighting = new JLabel(new
-		 * ImageIcon("src/Icons/fighting.png")); poison = new JLabel(new
-		 * ImageIcon("src/Icons/poison.png")); ground = new JLabel(new
-		 * ImageIcon("src/Icons/ground.png")); flying = new JLabel(new
-		 * ImageIcon("src/Icons/flying.png")); psychic = new JLabel(new
-		 * ImageIcon("src/Icons/psychic.png")); bug = new JLabel(new
-		 * ImageIcon("src/Icons/bug.png")); rock = new JLabel(new
-		 * ImageIcon("src/Icons/rock.png")); ghost = new JLabel(new
-		 * ImageIcon("src/Icons/ghost.png")); dragon = new JLabel(new
-		 * ImageIcon("src/Icons/dragon.png")); dark = new JLabel(new
-		 * ImageIcon("src/Icons/dark.png")); steel = new JLabel(new
-		 * ImageIcon("src/Icons/steel.png")); fairy = new JLabel(new
-		 * ImageIcon("src/Icons/fairy.png"));
-		 */
-
 		for (int i = 0; i < typeText.length; i++) {
 			typeText[i] = new JLabel(
 					"<html><font color = black>1x</font></html>");
 			typeText[i].setFont(new Font("Futura", Font.PLAIN, 20));
 		}
 
-		/*
-		 * normalEff = new
-		 * JLabel("<html><font color = black>1x</font></html>");normalEff
-		 * .setFont(new Font("Futura",Font.PLAIN,20)); fireEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );fireEff.setFont(new Font("Futura",Font.PLAIN,20)); waterEff = new
-		 * JLabel
-		 * ("<html><font color = black>1x</font></html>");waterEff.setFont(new
-		 * Font("Futura",Font.PLAIN,20)); grassEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );grassEff.setFont(new Font("Futura",Font.PLAIN,20)); electricEff =
-		 * new
-		 * JLabel("<html><font color = black>1x</font></html>");electricEff.setFont
-		 * (new Font("Futura",Font.PLAIN,20)); iceEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );iceEff.setFont(new Font("Futura",Font.PLAIN,20)); fightingEff = new
-		 * JLabel
-		 * ("<html><font color = black>1x</font></html>");fightingEff.setFont
-		 * (new Font("Futura",Font.PLAIN,20)); poisonEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );poisonEff.setFont(new Font("Futura",Font.PLAIN,20)); groundEff =
-		 * new
-		 * JLabel("<html><font color = black>1x</font></html>");groundEff.setFont
-		 * (new Font("Futura",Font.PLAIN,20)); flyingEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );flyingEff.setFont(new Font("Futura",Font.PLAIN,20)); psychicEff =
-		 * new
-		 * JLabel("<html><font color = black>1x</font></html>");psychicEff.setFont
-		 * (new Font("Futura",Font.PLAIN,20)); bugEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );bugEff.setFont(new Font("Futura",Font.PLAIN,20)); rockEff = new
-		 * JLabel
-		 * ("<html><font color = black>1x</font></html>");rockEff.setFont(new
-		 * Font("Futura",Font.PLAIN,20)); ghostEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );ghostEff.setFont(new Font("Futura",Font.PLAIN,20)); dragonEff = new
-		 * JLabel
-		 * ("<html><font color = black>1x</font></html>");dragonEff.setFont(new
-		 * Font("Futura",Font.PLAIN,20)); darkEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );darkEff.setFont(new Font("Futura",Font.PLAIN,20)); steelEff = new
-		 * JLabel
-		 * ("<html><font color = black>1x</font></html>");steelEff.setFont(new
-		 * Font("Futura",Font.PLAIN,20)); fairyEff = new
-		 * JLabel("<html><font color = black>1x</font></html>"
-		 * );fairyEff.setFont(new Font("Futura",Font.PLAIN,20));
-		 */
-
 		for (int i = 0; i < typeText.length; i++) {
 			resultPanel.add(typePicture[i]);
 			resultPanel.add(typeText[i]);
 		}
-
-		/*
-		 * resultPanel.add(normal); resultPanel.add(normalEff);
-		 * resultPanel.add(fire); resultPanel.add(fireEff);
-		 * resultPanel.add(water); resultPanel.add(waterEff);
-		 * resultPanel.add(grass); resultPanel.add(grassEff);
-		 * resultPanel.add(electric); resultPanel.add(electricEff);
-		 * resultPanel.add(ice); resultPanel.add(iceEff);
-		 * resultPanel.add(fighting); resultPanel.add(fightingEff);
-		 * resultPanel.add(poison); resultPanel.add(poisonEff);
-		 * resultPanel.add(ground); resultPanel.add(groundEff);
-		 * resultPanel.add(flying); resultPanel.add(flyingEff);
-		 * resultPanel.add(psychic); resultPanel.add(psychicEff);
-		 * resultPanel.add(bug); resultPanel.add(bugEff); resultPanel.add(rock);
-		 * resultPanel.add(rockEff); resultPanel.add(ghost);
-		 * resultPanel.add(ghostEff); resultPanel.add(dragon);
-		 * resultPanel.add(dragonEff); resultPanel.add(dark);
-		 * resultPanel.add(darkEff); resultPanel.add(steel);
-		 * resultPanel.add(steelEff); resultPanel.add(fairy);
-		 * resultPanel.add(fairyEff);
-		 */
 
 		add(resultPanel);
 	}
@@ -232,55 +134,14 @@ public class ProgramMainFrame extends JPanel {
 			for (int i = 0; i < typeText.length; i++) {
 				typeText[i].setText(table.getMatchup(choiceNum, i));
 			}
-			/*
-			 * normalEff.setText(table.getMatchup(choiceNum, 0));
-			 * fireEff.setText(table.getMatchup(choiceNum, 1));
-			 * waterEff.setText(table.getMatchup(choiceNum, 2));
-			 * grassEff.setText(table.getMatchup(choiceNum, 3));
-			 * electricEff.setText(table.getMatchup(choiceNum, 4));
-			 * iceEff.setText(table.getMatchup(choiceNum, 5));
-			 * fightingEff.setText(table.getMatchup(choiceNum, 6));
-			 * poisonEff.setText(table.getMatchup(choiceNum, 7));
-			 * groundEff.setText(table.getMatchup(choiceNum, 8));
-			 * flyingEff.setText(table.getMatchup(choiceNum, 9));
-			 * psychicEff.setText(table.getMatchup(choiceNum, 10));
-			 * bugEff.setText(table.getMatchup(choiceNum, 11));
-			 * rockEff.setText(table.getMatchup(choiceNum, 12));
-			 * ghostEff.setText(table.getMatchup(choiceNum, 13));
-			 * dragonEff.setText(table.getMatchup(choiceNum, 14));
-			 * darkEff.setText(table.getMatchup(choiceNum, 15));
-			 * steelEff.setText(table.getMatchup(choiceNum, 16));
-			 * fairyEff.setText(table.getMatchup(choiceNum, 17));
-			 */
 
 			break;
 		case "DEFENDING":
 			for (int i = 0; i < typeText.length; i++) {
 				typeText[i].setText(table.getMatchup(i, choiceNum));
 			}
-			/*
-			 * normalEff.setText(table.getMatchup(0, choiceNum));
-			 * fireEff.setText(table.getMatchup(1, choiceNum));
-			 * waterEff.setText(table.getMatchup(2, choiceNum));
-			 * grassEff.setText(table.getMatchup(3, choiceNum));
-			 * electricEff.setText(table.getMatchup(4, choiceNum));
-			 * iceEff.setText(table.getMatchup(5, choiceNum));
-			 * fightingEff.setText(table.getMatchup(6, choiceNum));
-			 * poisonEff.setText(table.getMatchup(7, choiceNum));
-			 * groundEff.setText(table.getMatchup(8, choiceNum));
-			 * flyingEff.setText(table.getMatchup(9, choiceNum));
-			 * psychicEff.setText(table.getMatchup(10, choiceNum));
-			 * bugEff.setText(table.getMatchup(11, choiceNum));
-			 * rockEff.setText(table.getMatchup(12, choiceNum));
-			 * ghostEff.setText(table.getMatchup(13, choiceNum));
-			 * dragonEff.setText(table.getMatchup(14, choiceNum));
-			 * darkEff.setText(table.getMatchup(15, choiceNum));
-			 * steelEff.setText(table.getMatchup(16, choiceNum));
-			 * fairyEff.setText(table.getMatchup(17, choiceNum));
-			 */
+
 			break;
 		}
 	}
-
-	// toString()
 }
